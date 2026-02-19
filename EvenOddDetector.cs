@@ -16,14 +16,23 @@ using System;
 /// DetectEvenOdd(7) → "IMPAR" 
 /// DetectEvenOdd(0) → "PAR" 
 /// </summary>
+
+
 public class EvenOddDetector
 {
     public static string DetectEvenOdd(int number)
     {
-        string resultado = ""; 
-        
-        // TODO: Usa el operador % y if/else para determinar si es PAR o IMPAR
-        
+        string resultado = "";
+
+        if (number % 2 == 0)
+        {
+            resultado = "PAR";
+        }
+        else
+        {
+            resultado = "IMPAR";
+        }
+
         return resultado;
     }
 }

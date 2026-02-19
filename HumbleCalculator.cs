@@ -16,15 +16,32 @@ using System;
 /// Calculate(10, 4, 2) → 6 (porque 10 - 4 = 6)
 /// Calculate(6, 7, 3) → 42 (porque 6 * 7 = 42)
 /// </summary>
+
+
 public class HumbleCalculator
 {
     public static double Calculate(double num1, double num2, int operation)
     {
-        double resultado = 0; 
-        
-        // TODO: Usa switch para calcular según la operación
-        // Ejemplo: switch(operation) { case 1: resultado = num1 + num2; break; ... }
-        
+        double resultado = 0;
+
+        switch (operation)
+        {
+            case 1:
+                resultado = num1 + num2;
+                break;
+
+            case 2:
+                resultado = num1 - num2;
+                break;
+
+            case 3:
+                resultado = num1 * num2;
+                break;
+
+            default:
+                throw new ArgumentException("Operación no válida");
+        }
+
         return resultado;
     }
 }
